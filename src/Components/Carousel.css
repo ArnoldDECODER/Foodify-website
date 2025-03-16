@@ -1,0 +1,106 @@
+/* Container for the entire carousel, including arrows and images */
+.carousel-container {
+    display: flex; /* Use flexbox to align items horizontally */
+    align-items: center; /* Center items vertically within the container */
+    justify-content: center; /* Center the carousel horizontally */
+    position: relative; /* Positioning context for absolute arrow buttons */
+    width: 80%; /* Take up 80% of the parent width */
+    margin: auto; /* Center the container horizontally */
+    overflow: hidden; /* Hide any content that overflows (e.g., sliding images) */
+  }
+  
+  /* Inner container for the sliding images/recipes */
+  .carousel {
+    display: flex; /* Use flexbox to arrange recipe cards side by side */
+    gap: 10px; /* Adds spacing between images Adds spacing between each recipe card */
+    transition: transform 0.5s ease-in-out; /* Smooth sliding animation when moving cards */
+  }
+  
+  /* Style for each individual recipe card in the carousel */
+  .trending-recipe {
+    flex: 1; /* Each card takes equal space within the carousel */
+    text-align: center; /* Center-align text and content inside the card */
+    min-width: 30%; /* Ensures 3 images are visible at a time (100% / 3 ≈ 33%) */
+    transition: transform 0.3s ease-in-out; /* Smooth scaling effect on hover */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-radius: 10px; /* Rounded corners for the card */
+  }
+  
+  /* Style for the image inside each recipe card */
+  .trending-recipe img {
+    width: 200px; /* Fixed width for consistent image size */
+    height: 200px; /* Fixed height for consistent image size */
+    border-radius: 8px; /* Slightly rounded corners for the image */
+    transition: transform 0.3s; /* Smooth scaling effect on hover */
+  }
+  
+  /* Hover effect for the recipe image */
+  .trending-recipe img:hover {
+    transform: scale(1.05); /* Slightly enlarge the image when hovered */
+  }
+  
+  /* Base style for the navigation arrows (left and right) */
+  .arrow {
+    position: absolute; /* Position arrows relative to the carousel-container */
+    top: 50%; /* Vertically center the arrows */
+    transform: translateY(-50%); /* Adjust for the arrow's own height to truly center it */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    color: white; /* White arrow symbol */
+    border: none; /* Remove default button border */
+    cursor: pointer; /* Show pointer cursor on hover */
+    font-size: 24px; /* Size of the arrow symbol */
+    padding: 10px; /* Padding around the arrow symbol */
+    border-radius: 50%; /* Circular shape for the button */
+  }
+  
+  /* Position the left arrow */
+  .arrow-left {
+    left: 10px; /* Place it 10px from the left edge of the container */
+  }
+  
+  /* Position the right arrow */
+  .arrow-right {
+    right: 10px; /* Place it 10px from the right edge of the container */
+  }
+  
+  /* Responsive design for screens 768px and smaller (e.g., tablets) */
+  @media (max-width: 768px) {
+    .trending-recipe {
+      min-width: 100%; /* Show only 1 recipe card at a time on small screens */
+    }
+  }
+  
+  /* Additional styling for the recipe card layout (overrides earlier definition) */
+  .trending-recipe {
+    display: flex; /* Use flexbox to stack content vertically */
+    flex-direction: column; /* Arrange image, title, and buttons in a column */
+    align-items: center; /* Center all content horizontally */
+    text-align: center; /* Center-align text */
+  }
+  
+  /* Style for buttons inside the recipe card (e.g., View Recipe, Favorite) */
+  .trending-recipe button {
+    background-color: #ffdfb7; /* Light peach background color */
+    color: white; /* White text color */
+    border: none; /* Remove default button border */
+    padding: 10px 15px; /* Vertical and horizontal padding */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Show pointer cursor on hover */
+    transition: background 0.3s ease; /* Smooth background color change on hover */
+    font-size: 1rem; /* Standard font size */
+    width: 120px; /* Fixed width for consistent button size */
+    height: 40px; /* Fixed height for consistent button size */
+  }
+  
+  /* Hover effect for the buttons */
+  .trending-recipe button:hover {
+    background-color: #ffbf80; /* Darker peach color on hover */
+  }
+  
+  /* Container to position buttons side by side */
+  .button-container {
+    display: flex; /* Use flexbox to arrange buttons horizontally */
+    gap: 15px; /* Space between the two buttons */
+    justify-content: center; /* Center the buttons horizontally */
+    margin-top: 10px; /* Add space above the buttons */
+  }

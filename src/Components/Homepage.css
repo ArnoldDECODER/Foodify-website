@@ -1,0 +1,31 @@
+/* Container for the entire homepage */
+.homepage {
+    display: flex; /* Use flexbox to arrange content */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically (if height is set) */
+    text-align: center; /* Center-align all text inside */
+    padding: 20px; /* Add padding around the content */
+  }
+  
+  /* Style for the welcome heading (e.g., "Welcome to Foodify") */
+  .welcome-text {
+    font-size: 2rem; /* Large font size for the heading */
+    font-weight: bold; /* Make the text bold */
+    margin-bottom: 10px; /* Space below the heading */
+    color: #333; /* Dark gray color for the text */
+  }
+  
+  /* Style for the trending recipes subheading (e.g., "Here are your trending recipes") */
+  .trending-text {
+    font-size: 1.5rem; /* Slightly smaller font size than the welcome text */
+    margin-bottom: 20px; /* Larger space below to separate from the carousel */
+    color: #666; /* Medium gray color for a softer look */
+  }
+  
+  /* Container for the carousel section */
+  .carousel-container {
+    width: 80%; /* Take up 80% of the parent width for a balanced layout */
+    max-width: 900px; /* Limit the maximum width to prevent it from getting too wide */
+    margin: auto; /* Center the carousel horizontally within the homepage */
+  }

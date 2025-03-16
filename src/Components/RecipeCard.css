@@ -1,0 +1,40 @@
+/* Container for the individual recipe card */
+.recipe-card {
+    max-width: 600px; /* Limit the maximum width to keep the card readable */
+    margin: 50px auto; /* Center the card horizontally with 50px top/bottom spacing */
+    padding: 20px; /* Add padding inside the card for content spacing */
+    border-radius: 10px; /* Rounded corners for a softer look */
+    background-color: #fff5e1; /* Light cream background color */
+    text-align: center; /* Center-align all text inside the card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth and elevation */
+  }
+  
+  /* Style for the recipe image inside the card */
+  .recipe-card img {
+    width: 100%; /* Make the image fill the card’s width */
+    border-radius: 10px; /* Rounded corners to match the card */
+    margin-bottom: 15px; /* Space below the image before the title */
+  }
+  
+  /* Style for the recipe title (h1) */
+  .recipe-card h1 {
+    font-size: 2rem; /* Large font size for the title */
+    color: #333; /* Dark gray color for the text */
+  }
+  
+  /* Style for section headings (Ingredients and Steps) */
+  .recipe-card h2 {
+    margin-top: 20px; /* Space above each section heading */
+    color: #444; /* Slightly lighter gray than the title for contrast */
+  }
+  
+  /* Style for unordered (ul) and ordered (ol) lists (ingredients and steps) */
+  .recipe-card ul, .recipe-card ol {
+    text-align: left; /* Left-align list items for readability */
+    padding-left: 20px; /* Indent the list from the left */
+  }
+  
+  /* Style for individual list items (li) in the lists */
+  .recipe-card li {
+    margin: 10px 0; /* Vertical spacing between list items */
+  }
